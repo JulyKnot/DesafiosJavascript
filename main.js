@@ -55,7 +55,7 @@ const desc =  (x) => x * 0.15;
 let total = desc(suma(producto1,producto2));
 console.log(saludo + mensaje + '$'+total )*/
 
-/*DESAFIO 6*/ 
+/*DESAFIO 5 
 class Rollos{
 constructor(nombre,precio,exposiciones,ISO) {
 	this.nombre= nombre;
@@ -73,10 +73,24 @@ constructor(nombre,precio,exposiciones,ISO) {
 	}
 }
 const rollitos = [];
-rollitos.push(new Rollos ("Kodak 200","$1400" ,36,200));
+rollitos.push(new Rollos ("","$1400" ,36,200));
 rollitos.push(new Rollos ("Kodak 500T","$1100" ,34,500));
 rollitos.push(new Rollos ("T-MAX", "$1900" ,24, 400));
 
-for (const objeto of rollitos) objeto.colocado();
+rollitos.colocado();
+
+*/
+
+/*DESAFIO 6*/
+const rollitos = [
+{ id: 1 , rollo :'Cetro', precio: 1100 , exposiciones: 36 , ISO:200 } ,
+{ id: 2 , rollo :'Magia', precio: 1100 , exposiciones: 36 , ISO:200 } ,
+{ id: 3 , rollo :'T-MAX', precio: 1900 , exposiciones: 24 , ISO:400 } ,
+{ id: 4 , rollo :'Ilford', precio: 2500 , exposiciones: 36 , ISO:200 } ,
+{ id: 5 , rollo :'Fomapan', precio: 1700 , exposiciones: 24 , ISO:400 } ,
+{ id: 6 , rollo :'Ektachrome', precio: 2900 , exposiciones: 36 , ISO:100 }];
 
 console.log(rollitos);
+
+const barata = rollitos.filter((rollo) => (rollo.precio < 1500));
+console.log(barata);
